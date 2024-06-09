@@ -2,7 +2,7 @@
 * By FlameClubDevelopment
 
 # Features
-* Maintenance Mode
+* Maintenance Mode: on, off, add, remove and list
 * Hub: Detect the server hub automatically
 * Reload Command: to reload config.yml 
 * Misc Commands: server, find and more
