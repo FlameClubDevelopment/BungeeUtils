@@ -3,8 +3,7 @@
 
 # Features
 * Maintenance Mode
-* Hub: It is an automatic system (It means that it detects the available hubs)
+* Hub: Detect the server hub automatically
 * Reload Command: to reload config.yml 
-* Other's commands: server, find
-* System kick: Kicking any mode will send the user to the first hub it finds and thus avoid being completely kicked from the server.
-* Maintenance Mode
+* Misc Commands: server, find and more
+* Kick Sytem: Kick the player to the Hub
