@@ -1,0 +1,41 @@
+# Whitelist System
+WHITELIST:
+  ENABLED: false
+  KICK-MESSAGE:
+    - ""
+    - "&cThe network is currently in maintenance."
+    - "&cAdditional info may be found at our discord!"
+    - ""
+  PLAYERS: []
+
+# Social Media
+TEAMSPEAK:
+  TEXT:
+    - "&4&lNeed sopport? &7Join our TeamSpeak."
+    - "&fts.firemc.us"
+STORE:
+  TEXT:
+    - "&4&lOur Store"
+    - "&fhttps://store.firemc.us"
+DISCORD:
+  TEXT:
+    - "&4&lOur Discord"
+    - "&fhttp://discord.firemc.us"
+TWITTER:
+  TEXT:
+    - "&4&lOur Twitter"
+    - "&fhttps://twitter.com/@FireMCUS"
+
+# Help Command
+HELP:
+  TEXT:
+    - "&7&m----------------------------------------"
+    - "&fFor instant assistance join our teamspeak!"
+    - ""
+    - " &4Teamspeak&7: &fts.firemc.us"
+    - " &4Twitter&7: &ftwitter.com/@FireMCUS"
+    - " &4Store&7: &fstore.firemc.us"
+    - " &4Website&7: &fwww.firemc.us"
+    - " &4Discord&7: &fhttp://discord.firemc.us"
+    - ""
+    - "&7&m----------------------------------------"
