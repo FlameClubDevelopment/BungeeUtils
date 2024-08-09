@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>club.flame.flameutils</groupId>
-    <artifactId>FlameUtils-Bungee</artifactId>
-    <version>1.0.2-STABLE</version>
+    <groupId>club.flame.BungeeUtils</groupId>
+    <artifactId>BungeeUtils</artifactId>
+    <version>2.0</version>
 
     <properties>
         <java.version>1.8</java.version>
@@ -26,7 +26,7 @@
             <artifactId>bungeecord-api</artifactId>
             <version>1.12-SNAPSHOT</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/Bungee.jar</systemPath>
+            <systemPath>${project.basedir}/libs/BungeeCord.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>

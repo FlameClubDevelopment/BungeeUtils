@@ -1,4 +1,4 @@
-name: FlameUtils-Bungee
-main: club.flame.flameutils.FlameUtils
+name: BungeeUtils
+main: club.flame.bungeeutils.BungeeUtils
 author: HCFAlerts
-version: 1.0.2-STABLE
+version: 2.0

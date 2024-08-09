@@ -1,6 +1,7 @@
 # Whitelist System
 WHITELIST:
   ENABLED: false
+  HUB-NAME: "Hub-01"
   KICK-MESSAGE:
     - ""
     - "&cThe network is currently in maintenance."
@@ -10,32 +11,64 @@ WHITELIST:
 
 # Social Media
 TEAMSPEAK:
-  TEXT:
-    - "&4&lNeed sopport? &7Join our TeamSpeak."
-    - "&fts.firemc.us"
+  MESSAGE:
+    - "&7&m-----------------------------"
+    - "&dTeamspeak&7: &f&ots.spacehcf.us"
+    - "&7&m-----------------------------"
 STORE:
-  TEXT:
-    - "&4&lOur Store"
-    - "&fhttps://store.firemc.us"
+  MESSAGE:
+    - "&7&m-----------------------------"
+    - "&dStore&7: &f&ostore.spacehcf.us"
+    - "&7&m-----------------------------"
 DISCORD:
-  TEXT:
-    - "&4&lOur Discord"
-    - "&fhttp://discord.firemc.us"
+  MESSAGE:
+    - "&7&m-----------------------------"
+    - "&dDiscord&7: &f&odiscord.spacehcf.us"
+    - "&7&m-----------------------------"
 TWITTER:
-  TEXT:
-    - "&4&lOur Twitter"
-    - "&fhttps://twitter.com/@FireMCUS"
+  MESSAGE:
+    - "&7&m-----------------------------"
+    - "&dTwitter&7: &f&o@SpaceHCFUS"
+    - "&7&m-----------------------------"
+WEBSITE:
+  MESSAGE:
+    - "&7&m-----------------------------"
+    - "&dWebsite&7: &f&owww.spacehcf.us"
+    - "&7&m-----------------------------"
 
 # Help Command
 HELP:
-  TEXT:
+  MESSAGE:
     - "&7&m----------------------------------------"
-    - "&fFor instant assistance join our teamspeak!"
+    - "&d&lSpaceHCF Network &7(%bungee_total%/3,500)"
     - ""
-    - " &4Teamspeak&7: &fts.firemc.us"
-    - " &4Twitter&7: &ftwitter.com/@FireMCUS"
-    - " &4Store&7: &fstore.firemc.us"
-    - " &4Website&7: &fwww.firemc.us"
-    - " &4Discord&7: &fhttp://discord.firemc.us"
+    - "&3■ &dTeamspeak&7: &f&ots.spacehcf.us"
+    - "&b■ &dTwitter&7: &f&ots.spacehcf.us"
+    - "&a■ &dStore&7: &f&ots.spacehcf.us"
+    - "&2■ &dWebsite&7: &f&owww.spacehcf.us"
+    - "&9■ &dDiscord&7: &f&odiscord.spacehcf.us"
     - ""
+    - "&4⚠ &cFor instant assistance join our teamspeak!"
     - "&7&m----------------------------------------"
+
+# Misc Utils Commands
+FIND:
+  MESSAGE: "&fis currently on"
+  FINAL: "&f."
+  PLAYER_COLOR: "&d" # Only works in main message.
+  SERVER_COLOR: "&d" # Only works in main message.
+  OFFLINE: "&cis currently not on the network."
+  OFFLINE_PLAYER_COLOR: "&c" # Only works in offline message.
+  USAGE: "&cUsage: /find <player>"
+HUB:
+  MESSAGE: "&dSending you to the &f"
+  FINAL: "&d..."
+  HUB-NAME: "Hub-01"
+SERVER:
+  MESSAGE: "&dConnecting you to &f"
+  FINAL: "&d!"
+  CONNECTED: "&dYou are currently connected to &f"
+  CONNECTED_FINAL: "&d."
+  USAGE: "&dConnect to a server with &f/server <name>&d."
+  NO_PERMISSION: "&cYou don't have permissions."
+  
