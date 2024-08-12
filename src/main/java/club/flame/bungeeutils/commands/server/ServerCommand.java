@@ -29,14 +29,14 @@ public class ServerCommand extends Command {
             if (player.hasPermission("bungeecord.command.server")) {
                 if (args.length == 0) {
                     player.sendMessage(CC.translate((config.getConfiguration().getString("SERVER.CONNECTED") + " " + player.getServer().getInfo().getName() + (config.getConfiguration().getString("SERVER.CONNECTED_FINAL")))));
-                    StringBuilder servers = new StringBuilder("&4Servers&7: &f");
+                    StringBuilder servers = new StringBuilder(CC.translate((config.getConfiguration().getString("SERVER.SERVERS"))));
                     boolean first = true;
                     for (String name : BungeeUtils.getInstance().getProxy().getServers().keySet()) {
                         if (first) {
                             servers.append(name);
                         }
                         else {
-                            servers.append("&7, &f").append(name);
+                            servers.append(CC.translate((config.getConfiguration().getString("SERVER.FORMAT")))).append(name);
                         }
                         first = false;
                     }

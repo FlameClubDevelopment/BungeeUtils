@@ -19,12 +19,12 @@ import java.util.UUID;
 public class MaintenanceCommand extends Command {
 
     public MaintenanceCommand() {
-        super("bungeewhitelist", "bungeecord.command.whitelist", "maintenance", "maintenancemode", "bwl");
+        super("bungeewhitelist", "bungeecord.command.maintenance", "maintenance", "maintenancemode", "bwl");
     }
     
     public void execute(CommandSender sender, String[] args) {
-        if (!sender.hasPermission("bungeecord.command.whitelist")) {
-            sender.sendMessage("&cNo permission.");
+        if (!sender.hasPermission("bungeecord.command.maintenance")) {
+            sender.sendMessage("&cYou don't have permissions.");
             return;
         }
 

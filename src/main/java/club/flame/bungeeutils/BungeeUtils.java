@@ -13,8 +13,8 @@ import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.api.scheduler.ScheduledTask;
 
 /**
- * Author: HCFAlerts
- * Project: BungeeUtils
+ * @author HCFAlerts
+ * @BungeeUtils project
  * SRC and Jar available at dsc.gg/liteclubdevelopment
  * or github.com/HCFAlerts --> github.com/liteclubdevelopment
  */
@@ -33,24 +33,28 @@ public class BungeeUtils extends Plugin {
         this.handlers();
         this.listeners();
         this.commands();
-        BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&7&m------------------------"));
+        BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&4&m=============================="));
         BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&cBungeeUtils &8- &fv" + getDescription().getVersion()));
         BungeeCord.getInstance().getConsole().sendMessage(CC.translate(""));
-        BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&cLicense Info"));
-        BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&4Status&f: &aActivated"));
-        BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&4License&f: Open-Source"));
-        BungeeCord.getInstance().getConsole().sendMessage(CC.translate(""));
-        BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&cPlugin Info"));
         BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&4Author&f: " + getDescription().getAuthor()));
-        BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&4Discord&f: dsc.gg/flameclubdevelopment"));
+        BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&4State&f: &aEnabled"));
         BungeeCord.getInstance().getConsole().sendMessage(CC.translate(""));
         BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&7&oThank you for using BungeeUtils"));
-        BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&7&m------------------------"));
+        BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&7&oJoin our Discord dsc.gg/flameclubdevelopment"));
+        BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&4&m=============================="));
     }
 
     public void onDisable() {
         configYML.getConfiguration().set("WHITELIST.PLAYERS", this.bungeeHandler.getWhitelists());
-        getInstance().getScheduledTask().cancel();
+        BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&4&m=============================="));
+        BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&cBungeeUtils &8- &fv" + getDescription().getVersion()));
+        BungeeCord.getInstance().getConsole().sendMessage(CC.translate(""));
+        BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&4Author&f: " + getDescription().getAuthor()));
+        BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&4State&f: &cDisabled"));
+        BungeeCord.getInstance().getConsole().sendMessage(CC.translate(""));
+        BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&7&oThank you for using BungeeUtils"));
+        BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&7&oJoin our Discord dsc.gg/flameclubdevelopment"));
+        BungeeCord.getInstance().getConsole().sendMessage(CC.translate("&4&m=============================="));
     }
 
     private void files() {
@@ -79,7 +83,7 @@ public class BungeeUtils extends Plugin {
     }
 
     public void whitelist(boolean enabled) {
-        configYML.getConfiguration().set("WHITELIST.ENABLED", enabled);
+        configYML.getConfiguration().set("MAINTENANCE.ENABLED", enabled);
         configYML.save();
         configYML.reload();
     }

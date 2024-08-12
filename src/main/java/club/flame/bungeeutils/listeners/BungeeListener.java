@@ -30,8 +30,8 @@ public class BungeeListener implements Listener {
 
     @EventHandler(priority = 64)
     public void onPing(ProxyPingEvent event) {
-        if (config.getConfiguration().getBoolean("WHITELIST.ENABLED")) {
-            event.getResponse().setVersion(new ServerPing.Protocol("§4Whitelisted", 9999));
+        if (config.getConfiguration().getBoolean("MAINTENANCE.ENABLED")) {
+            event.getResponse().setVersion(new ServerPing.Protocol(CC.translate(BungeeUtils.getInstance().getConfigYML().getConfiguration().getString("MAINTENANCE.PING-TEXT")), 9999));
             event.setResponse(event.getResponse());
         }
     }
@@ -41,23 +41,23 @@ public class BungeeListener implements Listener {
         ProxiedPlayer p = event.getPlayer();
         Random random = new Random();
         int rand = random.nextInt(1) + 1;
-        ServerInfo connect = BungeeCord.getInstance().getServerInfo(config.getConfiguration().getString("WHITELIST.HUB-NAME") + rand);
+        ServerInfo connect = BungeeCord.getInstance().getServerInfo(config.getConfiguration().getString("MAINTENANCE.HUB-NAME") + rand);
         if (event.getKickedFrom() == connect) {
-            p.disconnect(CC.translate("&cKicked from &f" + event.getKickedFrom().getName() + "&c: &f" + event.getKickReason()));
+            p.disconnect(CC.translate(config.getConfiguration().getStringList("KICK.MESSAGE") + event.getKickedFrom().getName() + "&c: &f" + event.getKickReason()));
         }
         else {
             event.setCancelServer(connect);
             event.setCancelled(true);
-            BungeeCord.getInstance().getScheduler().schedule(BungeeUtils.getInstance(), () -> p.sendMessage(CC.translate("&cKicked from &f" + event.getKickedFrom().getName() + "&c: &f" + event.getKickReason())), 2L, TimeUnit.SECONDS);
+            BungeeCord.getInstance().getScheduler().schedule(BungeeUtils.getInstance(), () -> p.sendMessage(CC.translate(config.getConfiguration().getStringList("KICK.MESSAGE") + event.getKickedFrom().getName() + "&c: &f" + event.getKickReason())), 2L, TimeUnit.SECONDS);
         }
     }
 
     @EventHandler
     public void onJoin(LoginEvent event) {
         CreatorYML config = BungeeUtils.getInstance().getConfigYML();
-        if (config.getConfiguration().getBoolean("WHITELIST.ENABLED") && !BungeeUtils.getInstance().getBungeeHandler().isWhitelisted(event.getConnection().getUniqueId().toString())) {
+        if (config.getConfiguration().getBoolean("MAINTENANCE.ENABLED") && !BungeeUtils.getInstance().getBungeeHandler().isWhitelisted(event.getConnection().getUniqueId().toString())) {
             event.setCancelled(true);
-            event.setCancelReason(config.getConfiguration().getStringList("WHITELIST.KICK-MESSAGE")
+            event.setCancelReason(config.getConfiguration().getStringList("MAINTENANCE.KICK-MESSAGE")
                     .stream()
                     .map(CC::translate)
                     .collect(Collectors.joining("\n")));

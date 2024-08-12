@@ -20,7 +20,7 @@ public class BungeeHandler {
     private final CreatorYML config = BungeeUtils.getInstance().getConfigYML();
     
     public BungeeHandler() {
-        this.whitelists = config.getConfiguration().getStringList("WHITELIST.PLAYERS");
+        this.whitelists = config.getConfiguration().getStringList("MAINTENANCE.PLAYERS");
     }
     
     public boolean isWhitelisted(String uuid) {
@@ -31,13 +31,13 @@ public class BungeeHandler {
         if (whitelisted) {
             if (!this.isWhitelisted(uuid)) {
                 this.whitelists.add(uuid);
-                config.getConfiguration().set("WHITELIST.PLAYERS", this.whitelists);
+                config.getConfiguration().set("MAINTENANCE.PLAYERS", this.whitelists);
                 config.save();
             }
         }
         else if (this.isWhitelisted(uuid)) {
             this.whitelists.remove(uuid);
-            config.getConfiguration().set("WHITELIST.PLAYERS", this.whitelists);
+            config.getConfiguration().set("MAINTENANCE.PLAYERS", this.whitelists);
             config.save();
         }
     }
