@@ -68,7 +68,7 @@ FIND:
 HUB:
   MESSAGE: "&dSending you to the &f"
   FINAL: "&d..." # Final Message: &dSending you to the &fHub-01&d...
-  HUB-NAME: "Hub-01"
+  HUB-NAME: "Hub-0" # Automatic Hub Detection.
 SERVER:
   MESSAGE: "&dConnecting you to &f"
   FINAL: "&d!" # Final Message: &dConnecting you to &f<server>&d!
@@ -77,5 +77,5 @@ SERVER:
   USAGE: "&dConnect to a server with &f/server <name>&d."
   SERVERS: "&dServers&7: &f"
   FORMAT: "&7, &f" # Ex: &dServers&7: &fLobby&7, &fHCF
-  NO_PERMISSION: "&cYou don't have permissions." # bungeecord.command.server
+  NO_PERMISSION: "&cYou don't have permissions/Unknown server." # bungeecord.command.server
   

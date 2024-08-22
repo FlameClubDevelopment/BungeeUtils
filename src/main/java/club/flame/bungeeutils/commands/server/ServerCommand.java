@@ -20,7 +20,7 @@ public class ServerCommand extends Command {
     private final CreatorYML config = BungeeUtils.getInstance().getConfigYML();
 
     public ServerCommand() {
-        super("server", "bungeecord.command.server", "connect", "play");
+        super("server", "bungeecord.command.server");
     }
     
     public void execute(CommandSender commandSender, String[] args) {
